@@ -10,5 +10,8 @@
     <script src ="scripts/controllers/moviesController.js"></script>
   </head>
   <body ng-controller="moviesController as moviesCtrl">
+    <div ng-repeat="movie in moviesCtrl.moviesArr">
+      <img ng-src="http://image.tmdb.org/t/p/w342{{movie.poster_path}}">
+    </div>
   </body>
 </html>

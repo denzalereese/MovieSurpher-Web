@@ -9,12 +9,13 @@ function moviesController(MovieService) {
 
   var movies = MovieService.get(onGetMoviesSuccess);
 
-}
+  function onGetMoviesSuccess(movieJSON) {
+    vm.moviesArr = movieJSON.results;
+    console.log(vm.moviesArr);
+  }
 
-function onGetMoviesSuccess(json) {
-  console.log(json);
-}
+  function onGetMoviesError(err) {
+    console.log('There was an error retrieving the movies!');
+  }
 
-function onGetMoviesError(err) {
-  console.log('There was an error retrieving the movies!');
 }
