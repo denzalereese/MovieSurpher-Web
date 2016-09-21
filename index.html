@@ -17,6 +17,7 @@
     <!--Angular CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
 
     <!--scripts-->
     <script src="scripts/app.js"></script>
@@ -24,11 +25,7 @@
     <script src ="scripts/controllers/moviesController.js"></script>
   </head>
 
-  <body ng-controller="moviesController as moviesCtrl">
-      <div class="row">
-        <div class="poster-container col s6 m4 l3" ng-repeat="movie in moviesCtrl.moviesArr">
-          <img class="hoverable responsive-img" ng-src="http://image.tmdb.org/t/p/w342{{movie.poster_path}}">
-        </div>
-      </div>
+  <body>
+    <ui-view></ui-view>
   </body>
 </html>
