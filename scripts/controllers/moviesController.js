@@ -2,16 +2,13 @@ angular
   .module('movieSurfer')
   .controller('moviesController', moviesController);
 
-moviesController.$inject = ['$http'];
+moviesController.$inject = ['MovieService'];
 
-function moviesController($http) {
+function moviesController(MovieService) {
   var vm = this;
 
-  $http({
-    method: 'GET',
-    url: "http://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc"
-          + "&api_key=c31191ceb90fed5378d03ca7d63d0f21"
-    }).then(onGetMoviesSuccess, onGetMoviesError);
+  var movies = MovieService.get(onGetMoviesSuccess);
+
 }
 
 function onGetMoviesSuccess(json) {
