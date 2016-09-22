@@ -12,6 +12,12 @@ function config($stateProvider, $locationProvider) {
       templateUrl: 'templates/movies.html',
       controllerAs: 'moviesCtrl',
       controller: 'moviesController'
+    })
+    .state('movie', {
+      url: '/movies/:movieId',
+      templateUrl: 'templates/movieDetails.html',
+      controllerAs: 'moviesShowCtrl',
+      controller: 'moviesShowController'
     });
 
   $locationProvider.html5Mode({
