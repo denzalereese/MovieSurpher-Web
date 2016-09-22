@@ -11,6 +11,7 @@ function moviesController(MovieDiscoverService) {
 
   function onGetMoviesSuccess(movieJSON) {
     vm.moviesArr = movieJSON.results;
+    console.log(vm.moviesArr);
   }
 
   function onGetMoviesError(err) {
