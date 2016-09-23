@@ -7,7 +7,7 @@ moviesController.$inject = ['MovieDiscoverService','$window', '$scope'];
 function moviesController(MovieDiscoverService, $window, $scope) {
   var vm = this;
 
-  var movies = MovieDiscoverService.get(onGetMoviesSuccess);
+  var movies = MovieDiscoverService.getAllMovies().get(onGetAllMoviesSuccess);
 
   var screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
@@ -33,8 +33,9 @@ function moviesController(MovieDiscoverService, $window, $scope) {
    }
   });
 
-  function onGetMoviesSuccess(movieJSON) {
+  function onGetAllMoviesSuccess(movieJSON) {
     vm.moviesArr = movieJSON.results;
+    console.log(vm.moviesArr);
   }
 
   function onGetMoviesError(err) {

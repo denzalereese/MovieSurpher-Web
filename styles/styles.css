@@ -10,9 +10,16 @@
 
 #movie-info-container {
   background-color: white;
+  height: 600px;
   width: 90%;
-  margin: 100px auto;
+  margin: 0 auto;
+  margin-top: 80px;
   padding: 20px 40px 20px 40px;
+}
+
+#movie-info-details-container {
+  width: 100%;
+  overflow: auto;
 }
 
 .movie-detail {
@@ -20,14 +27,23 @@
   margin-bottom: 15%;
 }
 
-#overview-container {
-  overflow: auto;
-}
-
 hr {
   margin-bottom: 10px;
+  border: 1px solid #d32f2f;
 }
 
 #overview-text {
   margin: 10px;
+}
+
+.yt-container {
+  margin: 7.6%;
+}
+
+.trailer-num, .review-author {
+  background-color: #d32f2f;
+}
+
+.review-text {
+  margin: 20px;
 }

@@ -1,35 +1,40 @@
-<!--<div class="container z-depth-5" id="movie-info-container">
-  <div class="row">
-    <h1 class="center-align">{{moviesShowCtrl.movie.title}}</h1>
-    <div id="poster-container" class="col s6">
-      <img class="z-depth-5 responsive-img" ng-src="http://image.tmdb.org/t/p/w342{{moviesShowCtrl.movie.poster_path}}">
-    </div>
-    <div id="details-container" class="col s6">
-      <h6 class="row center-align">{{moviesShowCtrl.movie.release_date | date}}</h6>
-      <h6 class="row center-align">{{moviesShowCtrl.movie.vote_average}}/10</h6>
-      <hr>
-      <p class="row center-align">{{moviesShowCtrl.movie.overview}}</p>
-      <hr>
-    </div>
-  </div>
-  <hr>
-  <div class="row" id="overview-container">
-    <p id="overview-text" class="center-align">{{moviesShowCtrl.movie.overview}}</p>
-  </div>
-</div>-->
-
 <div id="movie-info-container" class="card horizontal">
   <div class="card-image">
     <img class="movie-detail z-depth-5 hoverable" ng-src="http://image.tmdb.org/t/p/w342{{moviesShowCtrl.movie.poster_path}}">
   </div>
   <div class="card-stacked">
-    <div class="card-content">
+    <div class="card-content" id="movie-info-details-container">
       <h4 class="movie-detail row center-align">{{moviesShowCtrl.movie.title}}</h1>
-      <h6 class="movie-detail row center-align">{{moviesShowCtrl.movie.release_date | date}}</h6>
-      <h6 class="movie-detail row center-align">{{moviesShowCtrl.movie.vote_average}}/10</h6>
+      <h6 class="movie-detail row center-align">Release Date: {{moviesShowCtrl.movie.release_date | date}}</h6>
+      <h6 class="movie-detail row center-align">Rating: {{moviesShowCtrl.movie.vote_average}}</h6>
       <hr>
       <p class="row center-align">{{moviesShowCtrl.movie.overview}}</p>
       <hr>
+
+      <ul class="collapsible popout row" data-collapsible="expandable">
+        <li>
+          <div id="trailers-container" class="collapsible-header center-align">Trailers</div>
+          <div class="collapsible-body">
+            <ul class="collapsible" data-collapsible="accordion">
+              <li ng-repeat="trailerUrl in moviesShowCtrl.trailerURLs">
+                <div class="trailer-num collapsible-header center-align">Trailer #{{$index + 1}}</div>
+                <div class="collapsible-body yt-container"><iframe id="ytplayer" type="text/html" ng-src={{trailerUrl}}></iframe></div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div id="reviews-container" class="collapsible-header center-align">Reviews</div>
+          <div class="collapsible-body">
+              <ul class="collapsible" data-collapsible="accordion">
+                <li ng-repeat="review in moviesShowCtrl.reviewsArr">
+                  <div class="review-author collapsible-header center-align">By: {{review.author}} </div>
+                  <div class="review-text collapsible-body">{{review.content}}</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
-  </div>
 </div>

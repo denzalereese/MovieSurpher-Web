@@ -1,5 +1,5 @@
 angular
-  .module('movieSurfer', ['ngResource', 'ui.router'])
+  .module('movieSurfer', ['ngResource', 'ui.router', 'ngAnimate'])
   .config(config);
 
 config.$inject = ['$stateProvider', '$locationProvider', '$urlRouterProvider'];
@@ -40,4 +40,8 @@ function config($stateProvider, $locationProvider, $urlRouterProvider) {
    enabled: true,
    requireBase: false
  });*/
+
+ function logThatShit() {
+   console.log('logged');
+ }
 }
