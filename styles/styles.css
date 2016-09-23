@@ -46,3 +46,11 @@ hr {
 .review-text {
   margin: 20px;
 }
+
+#buttons-container {
+  margin-top: 40px;
+}
+
+#jump-to-surf {
+  background-color: #d32f2f;
+}

@@ -34,14 +34,5 @@ function config($stateProvider, $locationProvider, $urlRouterProvider) {
       templateUrl: 'templates/movieDetails.html',
       controllerAs: 'moviesShowCtrl',
       controller: 'moviesShowController'
-    });
-
-/*  $locationProvider.html5Mode({
-   enabled: true,
-   requireBase: false
- });*/
-
- function logThatShit() {
-   console.log('logged');
- }
+  });
 }

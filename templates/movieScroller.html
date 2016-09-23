@@ -10,5 +10,12 @@
   </div>
   <div id="clicked-details-container" class="col s8 animated bounceInRight">
     <ui-view></ui-view>
+    <div class="container">
+      <div id="buttons-container" class="row">
+        <button id="back-button" ng-click="moviesCtrl.goBack()" class="btn col s2 offset-s2">Previous</button>
+        <div class="col s4"></div>
+        <button id="jump-to-surf" class="btn waves-effect col s2" ui-sref="home">Surf</button>
+      </div>
+    </div>
   </div>
 </div>
