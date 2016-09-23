@@ -11,6 +11,7 @@ function moviesShowController($stateParams, MovieDiscoverService) {
 
   MovieDiscoverService.get(onGetMoviesSuccess);
 
+
   //Creates array of all the movie ids in the movie array
   //finds the index of the clicked movie's id in the arrray
   //sets vm.movie to the movie object at the index in the original movie array

@@ -1,0 +1,14 @@
+<div class="row">
+  <div id="movies-container" class="col s4">
+    <div class="row">
+      <div class="col s12 m6" ng-repeat="movie in moviesCtrl.moviesArr">
+        <a ui-sref="movieScroller.details({movieId: movie.id})">
+          <img class="hoverable responsive-img" ng-src="http://image.tmdb.org/t/p/w342{{movie.poster_path}}">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="clicked-details-container" class="col s8">
+    <ui-view></ui-view>
+  </div>
+</div>

@@ -1,15 +1,35 @@
-<div class="container">
+<!--<div class="container z-depth-5" id="movie-info-container">
   <div class="row">
-    <h4 class="center-align">{{moviesShowCtrl.movie.title}}</h4>
+    <h1 class="center-align">{{moviesShowCtrl.movie.title}}</h1>
     <div id="poster-container" class="col s6">
-      <img class="hoverable responsive-img" ng-src="http://image.tmdb.org/t/p/w342{{moviesShowCtrl.movie.poster_path}}">
+      <img class="z-depth-5 responsive-img" ng-src="http://image.tmdb.org/t/p/w342{{moviesShowCtrl.movie.poster_path}}">
     </div>
     <div id="details-container" class="col s6">
-      <p>{{moviesShowCtrl.movie.release_date}}</p>
-      <p>{{moviesShowCtrl.movie.vote_average}}/10</p>
+      <h6 class="row center-align">{{moviesShowCtrl.movie.release_date | date}}</h6>
+      <h6 class="row center-align">{{moviesShowCtrl.movie.vote_average}}/10</h6>
+      <hr>
+      <p class="row center-align">{{moviesShowCtrl.movie.overview}}</p>
+      <hr>
     </div>
   </div>
-  <div class="row">
-    <p class="center-align">{{moviesShowCtrl.movie.overview}}</p>
+  <hr>
+  <div class="row" id="overview-container">
+    <p id="overview-text" class="center-align">{{moviesShowCtrl.movie.overview}}</p>
+  </div>
+</div>-->
+
+<div id="movie-info-container" class="card horizontal">
+  <div class="card-image">
+    <img class="movie-detail z-depth-5 hoverable" ng-src="http://image.tmdb.org/t/p/w342{{moviesShowCtrl.movie.poster_path}}">
+  </div>
+  <div class="card-stacked">
+    <div class="card-content">
+      <h4 class="movie-detail row center-align">{{moviesShowCtrl.movie.title}}</h1>
+      <h6 class="movie-detail row center-align">{{moviesShowCtrl.movie.release_date | date}}</h6>
+      <h6 class="movie-detail row center-align">{{moviesShowCtrl.movie.vote_average}}/10</h6>
+      <hr>
+      <p class="row center-align">{{moviesShowCtrl.movie.overview}}</p>
+      <hr>
+    </div>
   </div>
 </div>
