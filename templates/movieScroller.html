@@ -1,9 +1,9 @@
 <div class="row">
   <div id="movies-container" class="col s4 animated fadeInDown">
     <div class="row">
-      <div class="col s12 m6" ng-repeat="movie in moviesCtrl.moviesArr">
+      <div class="col s12" ng-repeat="movie in moviesCtrl.moviesArr">
         <a ui-sref="movieScroller.details({movieId: movie.id})">
-          <img class="hoverable responsive-img" ng-src="http://image.tmdb.org/t/p/w342{{movie.poster_path}}">
+          <img class="hoverable responsive-img poster-scroller" ng-src="http://image.tmdb.org/t/p/w342{{movie.poster_path}}">
         </a>
       </div>
     </div>
