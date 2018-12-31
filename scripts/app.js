@@ -11,7 +11,7 @@ function config($stateProvider, $locationProvider, $urlRouterProvider) {
 
   $stateProvider
     .state('home', {
-      url:'/MovieSurpher-Web/',
+      url:'/',
       templateUrl: '/MovieSurpher-Web/templates/movies.html',
       controllerAs: 'moviesCtrl',
       controller: 'moviesController'
