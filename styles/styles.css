@@ -3,6 +3,19 @@
   overflow: auto;
 }
 
+.poster-main {
+  width: 20%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+
+.poster-scroller {
+  display: block;
+  margin: 0 auto;
+  padding: 2px;
+}
+
 #clicked-details-container {
   height: 900px;
   background-color: #f1f1f1;

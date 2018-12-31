@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col s6 m3" ng-repeat="movie in moviesCtrl.moviesArr">
+  <div class="col poster-main" ng-repeat="movie in moviesCtrl.moviesArr">
     <a ng-href="/#{{moviesCtrl.link}}{{movie.id}}">
       <img class="animated fadeIn hoverable z-depth-5 responsive-img" ng-src="http://image.tmdb.org/t/p/w342{{movie.poster_path}}">
     </a>
