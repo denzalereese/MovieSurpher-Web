@@ -11,26 +11,26 @@ function config($stateProvider, $locationProvider, $urlRouterProvider) {
 
   $stateProvider
     .state('home', {
-      url:'/',
+      url:'/MovieSurpher-Web/',
       templateUrl: '/MovieSurpher-Web/templates/movies.html',
       controllerAs: 'moviesCtrl',
       controller: 'moviesController'
     })
     .state('movieScroller', {
-      url:'/movies',
+      url:'/MovieSurpher-Web/movies',
       templateUrl: '/MovieSurpher-Web/templates/movieScroller.html',
       controllerAs: 'moviesCtrl',
       controller: 'moviesController',
       abstract: true
     })
     .state('movieScroller.details', {
-      url:'/:movieId',
+      url:'/MovieSurpher-Web/:movieId',
       templateUrl: '/MovieSurpher-Web/templates/movieDetails.html',
       controllerAs: 'moviesShowCtrl',
       controller: 'moviesShowController'
     })
     .state('movieDetails', {
-      url:'/movies/mobile/:movieId',
+      url:'/MovieSurpher-Web/movies/mobile/:movieId',
       templateUrl: '/MovieSurpher-Web/templates/movieDetails.html',
       controllerAs: 'moviesShowCtrl',
       controller: 'moviesShowController'

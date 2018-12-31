@@ -16,10 +16,10 @@ function moviesController(MovieDiscoverService, $window, $scope) {
   var screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
   if (screenWidth <= 500) {
-   vm.link = "/movies/mobile/";
+   vm.link = "/MovieSurpher-Web/movies/mobile/";
   }
   else {
-    vm.link = "/movies/";
+    vm.link = "/MovieSurpher-Web/movies/";
   }
 
   //when the screen is resized, change to mobile or desktop route depending on the resized screen width
@@ -28,11 +28,11 @@ function moviesController(MovieDiscoverService, $window, $scope) {
     screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
    if (screenWidth <= 600) {
-    vm.link = "/movies/mobile/";
+    vm.link = "/MovieSurpher-Web/movies/mobile/";
     $scope.$apply();
    }
    else {
-     vm.link = "/movies/";
+     vm.link = "/MovieSurpher-Web/movies/";
      $scope.$apply();
    }
   });
