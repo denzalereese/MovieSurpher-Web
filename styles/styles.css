@@ -1,3 +1,8 @@
+body {
+  margin: 0 auto;
+  width: 95%;
+}
+
 #movies-container {
   height: 900px;
   overflow: auto;
